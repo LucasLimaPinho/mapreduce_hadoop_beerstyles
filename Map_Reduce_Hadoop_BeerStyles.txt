@@ -1,0 +1,7 @@
+/* Simples aplicação padrão de MapReduce (Hadoop) fazendo WordCount de Estilos de Cerveja
+hdfs dfs -mkdir /BeerStyles
+hdfs dfs -ls /
+hdfs dfs -put /home/cloudera/Downloads/BeerStylesHadoop.txt /BeerStyles
+hadoop jar /home/cloudera/MapReduceBeerStyles.jar PackageDemo.WordCount /BeerStyles/BeerStyles Hadoop.txt /BeerStyles_Count
+hdfs dfs -ls /BeerStyles_Count
+hdfs dfs -cat /BeerStyles_Count/part-r-00000
